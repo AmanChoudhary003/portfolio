@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f9f9f9;
+height: 100%;
+  padding: 3rem;
+  font-family: 'Signika Negative', sans-serif;
+overflow-x:hidden ;
+background-image: url("image/background/hive1.png"), url("image/background/hive2.png"), url("image/background/hive3.png");
+background-repeat: no-repeat;
+background-size: 80rem, 80rem, 80rem;
+background-position: -30rem -10rem, 30rem 30rem, -20rem 80rem;
+}
+
+a{
+  text-decoration: none;
+}
+
+.arrowUp{
+  cursor: pointer;
+  position: absolute; 
+  top:5rem;right: 5rem;
+  width: 3rem;
+  animation: arrowPointer ease-in-out 1s infinite;
+}
+
+
+.navBar, .headerContainer, .info, .footer{
+  background-color: white;
+  opacity: 95%;
+  border-radius: 5px;
+}
+.address, .footerLink{
+  display: inline-block;
+ border-right: 2px solid black;
+ padding: 1rem 2rem;
+}
+
+.footer{
+  position: relative;
+  display: grid;
+grid-template-columns: 30% 30% ;
+  margin-top: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  padding: 3rem;
+}
+.info {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+.infoDiv {
+  margin: 1rem 0;
+}
+.infoDiv h3{
+  margin-bottom: .6rem;
+}
+.headerContainer {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  padding: 3rem;
+  position: relative;
+  height: 30rem;
+}
+.header {
+  position: absolute;
+  padding: 1rem 3rem 1rem 1rem;
+  left: 5rem;
+  top: 6rem;
+  line-height: 1.5rem;
+  width: 40rem;
+}
+html {
+  scroll-behavior: smooth;
+  /*Adds smooth scrolling instead of snapping to element*/
+}
+.heading {
+  margin-bottom: 2rem;
+  display: inline-block;
+  padding: 0.5rem 4rem 1rem 0;
+  font-weight:bolder;
+  border-bottom: 2px solid;
+}
+.link{
+  color: black;
+}
+li{
+  margin: .5rem 0 1rem;
+}
+.logo{
+  width: 3rem;
+  margin: 1rem .6rem 0 0;
+}
+.main, .main2{
+
+    margin-bottom: 2rem;
+}
+.name {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  font-size: 3rem;
+  border-bottom: 1px solid black;
+
+}
+.navBar{
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.navLink{
+  margin-top: .6rem;
+  cursor: pointer;
+}
+.profileImg {
+  right: 4rem;
+  position: absolute;
+  width: 25rem;
+  border-radius: 100%;
+ 
+}
+.summary {
+  padding-bottom: 1rem;
+  font-size: 1.3rem;
+  border-bottom: 2px solid black;
+}
+.showDiv {
+  display: none;
+}
+.welcomeMessage{
+  font-size: 12rem;
+}
+.welcomeTab {
+  background-color: black;
+  color: white;
+  display: flex;
+  font-size: 10rem;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.welcomeAnimation {
+  animation: welcome ease-in-out 2s;
+}
+
+
+@keyframes arrowPointer {
+  0%{
+transform: translateY(-.6rem);
+  }
+  50%{
+    transform: translateY(0rem);
+  }
+  100%{
+    transform: translateY(-.6rem);
+  }
+}
+
+
+@keyframes welcome {
+
+  0% {
+    height: 100%;
+    padding: 15%;
+  }
+
+  100% {
+    height: 0%;
+    padding: 0;
+  }
+}
+
+
+@media (max-width:850px) {
+
+  body {
+  background-size: 70rem, 70rem, 70rem;
+  background-position: -30rem -10rem, 20rem 40rem, -30rem 105rem;
+  
+  }
+  .profileImg{
+    margin:0 0 2rem;
+position: static;
+  }
+  .headerContainer{
+    text-align: center;
+    height: 100%;
+  }
+  .header{
+    width: 35rem;
+    padding: 1rem;
+    position:static;
+  }
+ .footer{
+  grid-template-columns: 40% 40% 15%;
+ } 
+}
+
+
+
+@media (max-width: 400px) {
+  .arrowUp{
+    position: static;
+    display: block;
+
+    margin:0 45%;
+    margin-top: 1rem;
+  }
+  body{
+    padding: 1rem;
+    background-size: 50rem, 50rem, 50rem;
+    background-position: -25rem -10rem, 5rem 50rem, -25rem 130rem;
+    
+  }
+  
+  .address, .footerLink{
+    border: none;
+  }
+  .eduPart{
+    width: 17rem;
+  }
+  .footer{
+    display: block;
+    padding: 1rem;
+    
+  }
+  .header{
+    padding: 0;
+    width: 100%;
+  }
+  .headerContainer, .info{
+    padding: 2rem;
+  }
+.info{
+  display: block;
+}
+
+  .name{
+    line-height: 1;
+  }
+  .profileImg{
+    width: 17rem;
+  }
+  .welcomeMessage{
+
+    font-size: 4rem;
+    margin-top: 6rem;
+  }
+}
